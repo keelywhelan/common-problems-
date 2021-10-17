@@ -38,7 +38,6 @@ struct ListNode* addTwo (struct ListNode* L1, struct ListNode* L2){
     struct ListNode* result =new;
     while (L1!=NULL || L2!=NULL){
         int sum = L1->val +L2->val +carry;
-        printf("L %d %d %d\n",L1->val,L2->val,sum );
         if (sum>9){
             carry = 1;
         }
@@ -47,7 +46,6 @@ struct ListNode* addTwo (struct ListNode* L1, struct ListNode* L2){
         }
         sum = sum%10;
         result = addNode(sum, result);
-        printf("L %d %d %d\n",L1->val,L2->val,sum );
         L1=L1->Next;
         L2=L2->Next;
     }
